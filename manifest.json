@@ -1,6 +1,14 @@
 {
     "files": {
-        "index.js": "0cbbdbe4562c362991ea66eb23e601a6ce2b950799664509dad0d76a61a0f72e"
+        "LICENSE": "e67e8b4a10ada65c0b1e7ff436b74c7d3dbe97bc68969b74714b3549d00dfa08",
+        "README.md": "37efa942d192ba4be3a4c1022d8e217e90e2c2159c4aa60fc42b2c5a6a7f8c8a",
+        "index.js": "9b364df7ba74ce589106fcb73f195a26745abe28339b78d0827694cbd90deb61",
+        "module.json": "4b59ec3eb5581dafd15e5dd746b600c1604edc162992c1037007cc2473efeb45"
     },
-    "defs": {}
+    "defs": {
+        "S_ACTION_END": 5,
+        "S_ACTION_STAGE": 9,
+        "S_SPAWN_NPC": 11,
+        "S_SPAWN_PROJECTILE": [5,"skill:"]
+    }
 }

@@ -63,7 +63,7 @@ class BahaarWaveEmulation {
                     my_info['pos'] = player.loc.clone();
                     my_info['w'] = player.loc.w;
 
-                    dispatch.send('S_SPAWN_NPC', 10, Object.assign({}, {
+                    dispatch.send('S_SPAWN_NPC', 11, Object.assign({}, {
                         gameId: 420133769,
                         templateId: 2000,
                         huntingZoneId: 444,
@@ -99,7 +99,7 @@ class BahaarWaveEmulation {
                         dest: my_info['pos']
                     };
                     dispatch.send('S_ACTION_END', 5, e)
-                    dispatch.send('S_ACTION_STAGE', 8, e);
+                    dispatch.send('S_ACTION_STAGE', 9, e);
                     setTimeout(()=> {
                         dispatch.send('S_ACTION_END', 5, e)
                     }, 5000);
@@ -115,7 +115,7 @@ class BahaarWaveEmulation {
         });
 
         function send_action_stage(e, stage) {
-            dispatch.send('S_ACTION_STAGE', 8, Object.assign({}, e, my_info['pos'], {
+            dispatch.send('S_ACTION_STAGE', 9, Object.assign({}, e, my_info['pos'], {
                 w: my_info['w'],
                 stage
             }));
@@ -182,7 +182,7 @@ class BahaarWaveEmulation {
         //my_info['load_topo_hook'] = dispatch.hook('S_LOAD_TOPO', 3, s_load_topo);
 
         function enable() {
-            add_hook('S_ACTION_STAGE', 8, {order: 100}, s_action_stage);
+            add_hook('S_ACTION_STAGE', 9, {order: 100}, s_action_stage);
             //add_hook('S_SPAWN_PROJECTILE', 5, s_spawn_projectile);
         }
 
